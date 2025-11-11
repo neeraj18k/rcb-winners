@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Stars, Float, Text3D, Center, MeshTransmissionMaterial } from "@react-three/drei";
+import { OrbitControls, Stars, Float, MeshTransmissionMaterial } from "@react-three/drei";
 import { Trophy } from "./Trophy";
 import { CricketBall } from "./CricketBall";
 import { Confetti } from "./Confetti";
@@ -28,21 +28,6 @@ export const VictoryScene = () => {
         <Float speed={2} rotationIntensity={0.5} floatIntensity={1}>
           <Trophy />
         </Float>
-
-        {/* RCB Text */}
-        <Center position={[0, 4, 0]}>
-          <Float speed={1.5} rotationIntensity={0.2} floatIntensity={0.5}>
-            <Text3D
-              font="/fonts/helvetiker_bold.typeface.json"
-              size={0.8}
-              height={0.2}
-              curveSegments={12}
-            >
-              RCB CHAMPIONS
-              <meshStandardMaterial color="#EC1C24" emissive="#FFD700" emissiveIntensity={0.5} />
-            </Text3D>
-          </Float>
-        </Center>
 
         {/* Cricket Balls */}
         <Float speed={3} rotationIntensity={1} floatIntensity={2}>
